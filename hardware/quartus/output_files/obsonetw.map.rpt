@@ -1,0 +1,627 @@
+Analysis & Synthesis report for obsonetw
+Sun May 19 14:28:04 2024
+Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. State Machine - |wifi|my_cmd_state
+ 10. State Machine - |wifi|my_rx_state
+ 11. State Machine - |wifi|my_tx_state
+ 12. State Machine - |wifi|UART:U1|tx_current_state_s
+ 13. State Machine - |wifi|UART:U1|rx_current_state_s
+ 14. Registers Removed During Synthesis
+ 15. General Register Statistics
+ 16. Inverted Register Statistics
+ 17. Registers Added for RAM Pass-Through Logic
+ 18. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 19. Source assignments for FIFO:U2|altsyncram:memory_rtl_0|altsyncram_mmg1:auto_generated
+ 20. Parameter Settings for User Entity Instance: FIFO:U2
+ 21. Parameter Settings for Inferred Entity Instance: FIFO:U2|altsyncram:memory_rtl_0
+ 22. altsyncram Parameter Settings by Entity Instance
+ 23. Port Connectivity Checks: "UART:U1"
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                ;
++-----------------------------+-----------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Sun May 19 14:28:04 2024         ;
+; Quartus II Version          ; 11.0 Build 208 07/03/2011 SP 1 SJ Web Edition ;
+; Revision Name               ; obsonetw                                      ;
+; Top-level Entity Name       ; wifi                                          ;
+; Family                      ; Cyclone                                       ;
+; Total logic elements        ; 586                                           ;
+; Total pins                  ; 40                                            ;
+; Total virtual pins          ; 0                                             ;
+; Total memory bits           ; 16,640                                        ;
+; Total PLLs                  ; 0                                             ;
++-----------------------------+-----------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP1C3T144C8        ;                    ;
+; Top-level entity name                                                      ; wifi               ; obsonetw           ;
+; Family name                                                                ; Cyclone            ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                      ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
+; wifi.vhd                         ; yes             ; User VHDL File               ; C:/Users/crist/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus/wifi.vhd               ;
+; uart.vhd                         ; yes             ; User VHDL File               ; C:/Users/crist/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus/uart.vhd               ;
+; fifo.vhd                         ; yes             ; User VHDL File               ; C:/Users/crist/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus/fifo.vhd               ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/altera/11.0sp1/quartus/libraries/megafunctions/altsyncram.tdf                                                                  ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/altera/11.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                           ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/altera/11.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                                                                     ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/altera/11.0sp1/quartus/libraries/megafunctions/lpm_decode.inc                                                                  ;
+; aglobal110.inc                   ; yes             ; Megafunction                 ; c:/altera/11.0sp1/quartus/libraries/megafunctions/aglobal110.inc                                                                  ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/altera/11.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc                                                                   ;
+; altrom.inc                       ; yes             ; Megafunction                 ; c:/altera/11.0sp1/quartus/libraries/megafunctions/altrom.inc                                                                      ;
+; altram.inc                       ; yes             ; Megafunction                 ; c:/altera/11.0sp1/quartus/libraries/megafunctions/altram.inc                                                                      ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; c:/altera/11.0sp1/quartus/libraries/megafunctions/altdpram.inc                                                                    ;
+; db/altsyncram_mmg1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/crist/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus/db/altsyncram_mmg1.tdf ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 586   ;
+;     -- Combinational with no register       ; 349   ;
+;     -- Register only                        ; 69    ;
+;     -- Combinational with a register        ; 168   ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 210   ;
+;     -- 3 input functions                    ; 105   ;
+;     -- 2 input functions                    ; 189   ;
+;     -- 1 input functions                    ; 12    ;
+;     -- 0 input functions                    ; 1     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 461   ;
+;     -- arithmetic mode                      ; 125   ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 27    ;
+;     -- asynchronous clear/load mode         ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 237   ;
+; Total logic cells in carry chains           ; 132   ;
+; I/O pins                                    ; 40    ;
+; Total memory bits                           ; 16640 ;
+; Maximum fan-out node                        ; clk_i ;
+; Maximum fan-out                             ; 245   ;
+; Total fan-out                               ; 2267  ;
+; Average fan-out                             ; 3.58  ;
++---------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                   ;
++-------------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                  ; Library Name ;
++-------------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------+--------------+
+; |wifi                                     ; 586 (130)   ; 237          ; 16640       ; 40   ; 0            ; 349 (54)     ; 69 (22)           ; 168 (54)         ; 132 (0)         ; 0 (0)      ; |wifi                                                                ;              ;
+;    |FIFO:U2|                              ; 141 (141)   ; 60           ; 16640       ; 0    ; 0            ; 81 (81)      ; 37 (37)           ; 23 (23)          ; 37 (37)         ; 0 (0)      ; |wifi|FIFO:U2                                                        ;              ;
+;       |altsyncram:memory_rtl_0|           ; 0 (0)       ; 0            ; 16640       ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |wifi|FIFO:U2|altsyncram:memory_rtl_0                                ;              ;
+;          |altsyncram_mmg1:auto_generated| ; 0 (0)       ; 0            ; 16640       ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |wifi|FIFO:U2|altsyncram:memory_rtl_0|altsyncram_mmg1:auto_generated ;              ;
+;    |UART:U1|                              ; 315 (315)   ; 101          ; 0           ; 0    ; 0            ; 214 (214)    ; 10 (10)           ; 91 (91)          ; 95 (95)         ; 0 (0)      ; |wifi|UART:U1                                                        ;              ;
++-------------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                               ;
++---------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
+; Name                                                                      ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF  ;
++---------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
+; FIFO:U2|altsyncram:memory_rtl_0|altsyncram_mmg1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 2080         ; 8            ; 2080         ; 8            ; 16640 ; None ;
++---------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |wifi|my_cmd_state                                                                                        ;
++-------------------------------+-------------------------------+-----------------------------+-----------------------------+
+; Name                          ; my_cmd_state.STATE_CMD_FINISH ; my_cmd_state.STATE_CMD_DATA ; my_cmd_state.STATE_CMD_IDLE ;
++-------------------------------+-------------------------------+-----------------------------+-----------------------------+
+; my_cmd_state.STATE_CMD_IDLE   ; 0                             ; 0                           ; 0                           ;
+; my_cmd_state.STATE_CMD_DATA   ; 0                             ; 1                           ; 1                           ;
+; my_cmd_state.STATE_CMD_FINISH ; 1                             ; 0                           ; 1                           ;
++-------------------------------+-------------------------------+-----------------------------+-----------------------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |wifi|my_rx_state                                                                                                                   ;
++-------------------------------+-----------------------------+-------------------------------+---------------------------+---------------------------+
+; Name                          ; my_rx_state.STATE_RX_FINISH ; my_rx_state.STATE_RX_WAITDATA ; my_rx_state.STATE_RX_DATA ; my_rx_state.STATE_RX_IDLE ;
++-------------------------------+-----------------------------+-------------------------------+---------------------------+---------------------------+
+; my_rx_state.STATE_RX_IDLE     ; 0                           ; 0                             ; 0                         ; 0                         ;
+; my_rx_state.STATE_RX_DATA     ; 0                           ; 0                             ; 1                         ; 1                         ;
+; my_rx_state.STATE_RX_WAITDATA ; 0                           ; 1                             ; 0                         ; 1                         ;
+; my_rx_state.STATE_RX_FINISH   ; 1                           ; 0                             ; 0                         ; 1                         ;
++-------------------------------+-----------------------------+-------------------------------+---------------------------+---------------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------+
+; State Machine - |wifi|my_tx_state                                                                                 ;
++-----------------------------+-----------------------------+---------------------------+---------------------------+
+; Name                        ; my_tx_state.STATE_TX_FINISH ; my_tx_state.STATE_TX_DATA ; my_tx_state.STATE_TX_IDLE ;
++-----------------------------+-----------------------------+---------------------------+---------------------------+
+; my_tx_state.STATE_TX_IDLE   ; 0                           ; 0                         ; 0                         ;
+; my_tx_state.STATE_TX_DATA   ; 0                           ; 1                         ; 1                         ;
+; my_tx_state.STATE_TX_FINISH ; 1                           ; 0                         ; 1                         ;
++-----------------------------+-----------------------------+---------------------------+---------------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |wifi|UART:U1|tx_current_state_s                                                                                                                                                                     ;
++------------------------------------+------------------------------------+----------------------------------+----------------------------------+-----------------------------------+----------------------------------+
+; Name                               ; tx_current_state_s.STATE_TX_FINISH ; tx_current_state_s.STATE_TX_STOP ; tx_current_state_s.STATE_TX_DATA ; tx_current_state_s.STATE_TX_START ; tx_current_state_s.STATE_TX_IDLE ;
++------------------------------------+------------------------------------+----------------------------------+----------------------------------+-----------------------------------+----------------------------------+
+; tx_current_state_s.STATE_TX_IDLE   ; 0                                  ; 0                                ; 0                                ; 0                                 ; 0                                ;
+; tx_current_state_s.STATE_TX_START  ; 0                                  ; 0                                ; 0                                ; 1                                 ; 1                                ;
+; tx_current_state_s.STATE_TX_DATA   ; 0                                  ; 0                                ; 1                                ; 0                                 ; 1                                ;
+; tx_current_state_s.STATE_TX_STOP   ; 0                                  ; 1                                ; 0                                ; 0                                 ; 1                                ;
+; tx_current_state_s.STATE_TX_FINISH ; 1                                  ; 0                                ; 0                                ; 0                                 ; 1                                ;
++------------------------------------+------------------------------------+----------------------------------+----------------------------------+-----------------------------------+----------------------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |wifi|UART:U1|rx_current_state_s                                                                                                                                                                     ;
++------------------------------------+------------------------------------+----------------------------------+----------------------------------+-----------------------------------+----------------------------------+
+; Name                               ; rx_current_state_s.STATE_RX_FINISH ; rx_current_state_s.STATE_RX_STOP ; rx_current_state_s.STATE_RX_DATA ; rx_current_state_s.STATE_RX_START ; rx_current_state_s.STATE_RX_IDLE ;
++------------------------------------+------------------------------------+----------------------------------+----------------------------------+-----------------------------------+----------------------------------+
+; rx_current_state_s.STATE_RX_IDLE   ; 0                                  ; 0                                ; 0                                ; 0                                 ; 0                                ;
+; rx_current_state_s.STATE_RX_START  ; 0                                  ; 0                                ; 0                                ; 1                                 ; 1                                ;
+; rx_current_state_s.STATE_RX_DATA   ; 0                                  ; 0                                ; 1                                ; 0                                 ; 1                                ;
+; rx_current_state_s.STATE_RX_STOP   ; 0                                  ; 1                                ; 0                                ; 0                                 ; 1                                ;
+; rx_current_state_s.STATE_RX_FINISH ; 1                                  ; 0                                ; 0                                ; 0                                 ; 1                                ;
++------------------------------------+------------------------------------+----------------------------------+----------------------------------+-----------------------------------+----------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; out_uart_status[7]                     ; Merged with out_uart_status[6]         ;
+; prescaler_i_s[13]                      ; Stuck at GND due to stuck port data_in ;
+; FIFO:U2|memory_rtl_0_bypass[24]        ; Merged with FIFO:U2|tail_s[11]         ;
+; FIFO:U2|memory_rtl_0_bypass[22]        ; Merged with FIFO:U2|tail_s[10]         ;
+; FIFO:U2|memory_rtl_0_bypass[20]        ; Merged with FIFO:U2|tail_s[9]          ;
+; FIFO:U2|memory_rtl_0_bypass[18]        ; Merged with FIFO:U2|tail_s[8]          ;
+; FIFO:U2|memory_rtl_0_bypass[16]        ; Merged with FIFO:U2|tail_s[7]          ;
+; FIFO:U2|memory_rtl_0_bypass[14]        ; Merged with FIFO:U2|tail_s[6]          ;
+; FIFO:U2|memory_rtl_0_bypass[12]        ; Merged with FIFO:U2|tail_s[5]          ;
+; FIFO:U2|memory_rtl_0_bypass[10]        ; Merged with FIFO:U2|tail_s[4]          ;
+; FIFO:U2|memory_rtl_0_bypass[8]         ; Merged with FIFO:U2|tail_s[3]          ;
+; FIFO:U2|memory_rtl_0_bypass[6]         ; Merged with FIFO:U2|tail_s[2]          ;
+; FIFO:U2|memory_rtl_0_bypass[4]         ; Merged with FIFO:U2|tail_s[1]          ;
+; FIFO:U2|memory_rtl_0_bypass[2]         ; Merged with FIFO:U2|tail_s[0]          ;
+; my_cmd_state.STATE_CMD_FINISH          ; Lost fanout                            ;
+; my_cmd_state.STATE_CMD_DATA            ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 16 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 237   ;
+; Number of registers using Synchronous Clear  ; 19    ;
+; Number of registers using Synchronous Load   ; 10    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 159   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; wait_o~reg0                            ; 4       ;
+; UART:U1|tx_clock_counter_s[31]         ; 3       ;
+; prescaler_i_s[0]                       ; 4       ;
+; UART:U1|tx_clock_counter_s[0]          ; 3       ;
+; prescaler_i_s[4]                       ; 1       ;
+; prescaler_i_s[3]                       ; 1       ;
+; UART:U1|rx_clock_counter_s[31]         ; 4       ;
+; UART:U1|rx_clock_counter_s[0]          ; 4       ;
+; Total number of inverted registers = 8 ;         ;
++----------------------------------------+---------+
+
+
++--------------------------------------------------------+
+; Registers Added for RAM Pass-Through Logic             ;
++---------------------------------+----------------------+
+; Register Name                   ; RAM Name             ;
++---------------------------------+----------------------+
+; FIFO:U2|memory_rtl_0_bypass[0]  ; FIFO:U2|memory_rtl_0 ;
+; FIFO:U2|memory_rtl_0_bypass[1]  ; FIFO:U2|memory_rtl_0 ;
+; FIFO:U2|memory_rtl_0_bypass[2]  ; FIFO:U2|memory_rtl_0 ;
+; FIFO:U2|memory_rtl_0_bypass[3]  ; FIFO:U2|memory_rtl_0 ;
+; FIFO:U2|memory_rtl_0_bypass[4]  ; FIFO:U2|memory_rtl_0 ;
+; FIFO:U2|memory_rtl_0_bypass[5]  ; FIFO:U2|memory_rtl_0 ;
+; FIFO:U2|memory_rtl_0_bypass[6]  ; FIFO:U2|memory_rtl_0 ;
+; FIFO:U2|memory_rtl_0_bypass[7]  ; FIFO:U2|memory_rtl_0 ;
+; FIFO:U2|memory_rtl_0_bypass[8]  ; FIFO:U2|memory_rtl_0 ;
+; FIFO:U2|memory_rtl_0_bypass[9]  ; FIFO:U2|memory_rtl_0 ;
+; FIFO:U2|memory_rtl_0_bypass[10] ; FIFO:U2|memory_rtl_0 ;
+; FIFO:U2|memory_rtl_0_bypass[11] ; FIFO:U2|memory_rtl_0 ;
+; FIFO:U2|memory_rtl_0_bypass[12] ; FIFO:U2|memory_rtl_0 ;
+; FIFO:U2|memory_rtl_0_bypass[13] ; FIFO:U2|memory_rtl_0 ;
+; FIFO:U2|memory_rtl_0_bypass[14] ; FIFO:U2|memory_rtl_0 ;
+; FIFO:U2|memory_rtl_0_bypass[15] ; FIFO:U2|memory_rtl_0 ;
+; FIFO:U2|memory_rtl_0_bypass[16] ; FIFO:U2|memory_rtl_0 ;
+; FIFO:U2|memory_rtl_0_bypass[17] ; FIFO:U2|memory_rtl_0 ;
+; FIFO:U2|memory_rtl_0_bypass[18] ; FIFO:U2|memory_rtl_0 ;
+; FIFO:U2|memory_rtl_0_bypass[19] ; FIFO:U2|memory_rtl_0 ;
+; FIFO:U2|memory_rtl_0_bypass[20] ; FIFO:U2|memory_rtl_0 ;
+; FIFO:U2|memory_rtl_0_bypass[21] ; FIFO:U2|memory_rtl_0 ;
+; FIFO:U2|memory_rtl_0_bypass[22] ; FIFO:U2|memory_rtl_0 ;
+; FIFO:U2|memory_rtl_0_bypass[23] ; FIFO:U2|memory_rtl_0 ;
+; FIFO:U2|memory_rtl_0_bypass[24] ; FIFO:U2|memory_rtl_0 ;
+; FIFO:U2|memory_rtl_0_bypass[25] ; FIFO:U2|memory_rtl_0 ;
+; FIFO:U2|memory_rtl_0_bypass[26] ; FIFO:U2|memory_rtl_0 ;
+; FIFO:U2|memory_rtl_0_bypass[27] ; FIFO:U2|memory_rtl_0 ;
+; FIFO:U2|memory_rtl_0_bypass[28] ; FIFO:U2|memory_rtl_0 ;
+; FIFO:U2|memory_rtl_0_bypass[29] ; FIFO:U2|memory_rtl_0 ;
+; FIFO:U2|memory_rtl_0_bypass[30] ; FIFO:U2|memory_rtl_0 ;
+; FIFO:U2|memory_rtl_0_bypass[31] ; FIFO:U2|memory_rtl_0 ;
+; FIFO:U2|memory_rtl_0_bypass[32] ; FIFO:U2|memory_rtl_0 ;
++---------------------------------+----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+--------------------------------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                           ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+--------------------------------------+----------------------------+
+; 5:1                ; 12 bits   ; 36 LEs        ; 12 LEs               ; 24 LEs                 ; |wifi|FIFO:U2|head_s[0]              ;                            ;
+; 4:1                ; 30 bits   ; 60 LEs        ; 30 LEs               ; 30 LEs                 ; |wifi|UART:U1|tx_clock_counter_s[22] ;                            ;
+; 7:1                ; 30 bits   ; 120 LEs       ; 30 LEs               ; 90 LEs                 ; |wifi|UART:U1|rx_clock_counter_s[29] ;                            ;
+; 20:1               ; 10 bits   ; 130 LEs       ; 60 LEs               ; 70 LEs                 ; |wifi|prescaler_i_s[12]              ;                            ;
+; 8:1                ; 7 bits    ; 35 LEs        ; 14 LEs               ; 21 LEs                 ; |wifi|db_o[3]~reg0                   ;                            ;
+; 10:1               ; 20 bits   ; 120 LEs       ; 20 LEs               ; 100 LEs                ; |wifi|qckbase_cnt[10]                ;                            ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; |wifi|UART:U1|tx_clock_counter_s[0]  ;                            ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; |wifi|UART:U1|rx_clock_counter_s[31] ;                            ;
+; 20:1               ; 3 bits    ; 39 LEs        ; 15 LEs               ; 24 LEs                 ; |wifi|prescaler_i_s[4]               ;                            ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; |wifi|UART:U1|tx_bit_index_s         ;                            ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; |wifi|UART:U1|rx_bit_index_s         ;                            ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; |wifi|my_rx_state                    ;                            ;
+; 5:1                ; 12 bits   ; 36 LEs        ; 24 LEs               ; 12 LEs                 ; |wifi|FIFO:U2|tail_s                 ;                            ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; |wifi|my_cmd_state                   ;                            ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; |wifi|my_tx_state                    ;                            ;
++--------------------+-----------+---------------+----------------------+------------------------+--------------------------------------+----------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Source assignments for FIFO:U2|altsyncram:memory_rtl_0|altsyncram_mmg1:auto_generated ;
++---------------------------------+--------------------+------+-------------------------+
+; Assignment                      ; Value              ; From ; To                      ;
++---------------------------------+--------------------+------+-------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                       ;
++---------------------------------+--------------------+------+-------------------------+
+
+
++------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FIFO:U2 ;
++----------------+-------+-----------------------------+
+; Parameter Name ; Value ; Type                        ;
++----------------+-------+-----------------------------+
+; data_width     ; 8     ; Signed Integer              ;
+; fifo_depth     ; 2080  ; Signed Integer              ;
++----------------+-------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: FIFO:U2|altsyncram:memory_rtl_0 ;
++------------------------------------+----------------------+----------------------+
+; Parameter Name                     ; Value                ; Type                 ;
++------------------------------------+----------------------+----------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped              ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY           ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY         ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE         ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE       ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped              ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped              ;
+; WIDTH_A                            ; 8                    ; Untyped              ;
+; WIDTHAD_A                          ; 12                   ; Untyped              ;
+; NUMWORDS_A                         ; 2080                 ; Untyped              ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped              ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped              ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped              ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped              ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped              ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped              ;
+; WIDTH_B                            ; 8                    ; Untyped              ;
+; WIDTHAD_B                          ; 12                   ; Untyped              ;
+; NUMWORDS_B                         ; 2080                 ; Untyped              ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped              ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped              ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped              ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped              ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped              ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped              ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped              ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped              ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped              ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped              ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped              ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped              ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped              ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped              ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped              ;
+; BYTE_SIZE                          ; 8                    ; Untyped              ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA             ; Untyped              ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped              ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped              ;
+; INIT_FILE                          ; UNUSED               ; Untyped              ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped              ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped              ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped              ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped              ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped              ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped              ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped              ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped              ;
+; ENABLE_ECC                         ; FALSE                ; Untyped              ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped              ;
+; DEVICE_FAMILY                      ; Cyclone              ; Untyped              ;
+; CBXI_PARAMETER                     ; altsyncram_mmg1      ; Untyped              ;
++------------------------------------+----------------------+----------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                            ;
++-------------------------------------------+---------------------------------+
+; Name                                      ; Value                           ;
++-------------------------------------------+---------------------------------+
+; Number of entity instances                ; 1                               ;
+; Entity Instance                           ; FIFO:U2|altsyncram:memory_rtl_0 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                       ;
+;     -- WIDTH_A                            ; 8                               ;
+;     -- NUMWORDS_A                         ; 2080                            ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                    ;
+;     -- WIDTH_B                            ; 8                               ;
+;     -- NUMWORDS_B                         ; 2080                            ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                          ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                    ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                            ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                        ;
++-------------------------------------------+---------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UART:U1"                                                                                          ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port               ; Type   ; Severity ; Details                                                                             ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; tx_byte_finished_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun May 19 14:27:58 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off obsonetw -c obsonetw
+Warning: Parallel compilation is not licensed and has been disabled
+Info: Found 2 design units, including 1 entities, in source file wifi.vhd
+    Info: Found design unit 1: wifi-Behavior
+    Info: Found entity 1: wifi
+Info: Found 2 design units, including 1 entities, in source file uart.vhd
+    Info: Found design unit 1: UART-RTL
+    Info: Found entity 1: UART
+Info: Found 2 design units, including 1 entities, in source file fifo.vhd
+    Info: Found design unit 1: FIFO-Behavioral
+    Info: Found entity 1: FIFO
+Info: Elaborating entity "wifi" for the top level hierarchy
+Info: Elaborating entity "UART" for hierarchy "UART:U1"
+Info: Elaborating entity "FIFO" for hierarchy "FIFO:U2"
+Warning: Inferred RAM node "FIFO:U2|memory_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Info: Inferred 1 megafunctions from design logic
+    Info: Inferred altsyncram megafunction from the following design logic: "FIFO:U2|memory_rtl_0" 
+        Info: Parameter OPERATION_MODE set to DUAL_PORT
+        Info: Parameter WIDTH_A set to 8
+        Info: Parameter WIDTHAD_A set to 12
+        Info: Parameter NUMWORDS_A set to 2080
+        Info: Parameter WIDTH_B set to 8
+        Info: Parameter WIDTHAD_B set to 12
+        Info: Parameter NUMWORDS_B set to 2080
+        Info: Parameter ADDRESS_ACLR_A set to NONE
+        Info: Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info: Parameter ADDRESS_ACLR_B set to NONE
+        Info: Parameter OUTDATA_ACLR_B set to NONE
+        Info: Parameter ADDRESS_REG_B set to CLOCK0
+        Info: Parameter INDATA_ACLR_A set to NONE
+        Info: Parameter WRCONTROL_ACLR_A set to NONE
+        Info: Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+Info: Elaborated megafunction instantiation "FIFO:U2|altsyncram:memory_rtl_0"
+Info: Instantiated megafunction "FIFO:U2|altsyncram:memory_rtl_0" with the following parameter:
+    Info: Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info: Parameter "WIDTH_A" = "8"
+    Info: Parameter "WIDTHAD_A" = "12"
+    Info: Parameter "NUMWORDS_A" = "2080"
+    Info: Parameter "WIDTH_B" = "8"
+    Info: Parameter "WIDTHAD_B" = "12"
+    Info: Parameter "NUMWORDS_B" = "2080"
+    Info: Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info: Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info: Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info: Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info: Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info: Parameter "INDATA_ACLR_A" = "NONE"
+    Info: Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info: Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_mmg1.tdf
+    Info: Found entity 1: altsyncram_mmg1
+Info: 1 registers lost all their fanouts during netlist optimizations. The first 1 are displayed below.
+    Info: Register "my_cmd_state.STATE_CMD_FINISH" lost all its fanouts during netlist optimizations.
+Info: Generating hard_block partition "hard_block:auto_generated_inst"
+Warning: Design contains 8 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "adr_i[8]"
+    Warning (15610): No output dependent on input pin "adr_i[9]"
+    Warning (15610): No output dependent on input pin "adr_i[10]"
+    Warning (15610): No output dependent on input pin "adr_i[11]"
+    Warning (15610): No output dependent on input pin "adr_i[12]"
+    Warning (15610): No output dependent on input pin "adr_i[13]"
+    Warning (15610): No output dependent on input pin "adr_i[14]"
+    Warning (15610): No output dependent on input pin "adr_i[15]"
+Info: Implemented 634 device resources after synthesis - the final resource count might be different
+    Info: Implemented 30 input pins
+    Info: Implemented 10 output pins
+    Info: Implemented 586 logic cells
+    Info: Implemented 8 RAM segments
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 309 megabytes
+    Info: Processing ended: Sun May 19 14:28:04 2024
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:02
+
+
