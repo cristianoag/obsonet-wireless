@@ -1,5 +1,5 @@
 Flow report for obsonetw
-Sun May 19 14:28:13 2024
+Mon May 27 21:19:30 2024
 Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------+
 ; Flow Summary                                                          ;
 +-----------------------+-----------------------------------------------+
-; Flow Status           ; Successful - Sun May 19 14:28:11 2024         ;
+; Flow Status           ; Successful - Mon May 27 21:19:28 2024         ;
 ; Quartus II Version    ; 11.0 Build 208 07/03/2011 SP 1 SJ Web Edition ;
 ; Revision Name         ; obsonetw                                      ;
 ; Top-level Entity Name ; wifi                                          ;
@@ -58,28 +58,30 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/19/2024 14:27:58 ;
+; Start date & time ; 05/27/2024 21:19:16 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; obsonetw            ;
 +-------------------+---------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                               ;
-+-------------------------------------+------------------------------+--------------------------------+-------------+------------+
-; Assignment Name                     ; Value                        ; Default Value                  ; Entity Name ; Section Id ;
-+-------------------------------------+------------------------------+--------------------------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 963355345413.171613967813876 ; --                             ; --          ; --         ;
-; FITTER_EFFORT                       ; Standard Fit                 ; Auto Fit                       ; --          ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                           ; --                             ; --          ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                            ; --                             ; --          ; --         ;
-; OPTIMIZE_HOLD_TIMING                ; Off                          ; IO Paths and Minimum TPD Paths ; --          ; --         ;
-; PARTITION_COLOR                     ; 16764057                     ; --                             ; wifi        ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING        ; --                             ; wifi        ; Top        ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                       ; --                             ; wifi        ; Top        ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                 ; --                             ; --          ; --         ;
-; TOP_LEVEL_ENTITY                    ; wifi                         ; obsonetw                       ; --          ; --         ;
-+-------------------------------------+------------------------------+--------------------------------+-------------+------------+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                    ;
++---------------------------------------+---------------------------------+--------------------------------+-------------+------------+
+; Assignment Name                       ; Value                           ; Default Value                  ; Entity Name ; Section Id ;
++---------------------------------------+---------------------------------+--------------------------------+-------------+------------+
+; COMPILER_SIGNATURE_ID                 ; 114477776557699.171685555616276 ; --                             ; --          ; --         ;
+; FITTER_EFFORT                         ; Standard Fit                    ; Auto Fit                       ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP                ; 85                              ; --                             ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP                ; 0                               ; --                             ; --          ; --         ;
+; OPTIMIZE_HOLD_TIMING                  ; Off                             ; IO Paths and Minimum TPD Paths ; --          ; --         ;
+; OPTIMIZE_MULTI_CORNER_TIMING          ; Off                             ; On                             ; --          ; --         ;
+; PARTITION_COLOR                       ; 16764057                        ; --                             ; wifi        ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL   ; PLACEMENT_AND_ROUTING           ; --                             ; wifi        ; Top        ;
+; PARTITION_NETLIST_TYPE                ; SOURCE                          ; --                             ; wifi        ; Top        ;
+; PROJECT_OUTPUT_DIRECTORY              ; output_files                    ; --                             ; --          ; --         ;
+; SYNCHRONIZATION_REGISTER_CHAIN_LENGTH ; 2                               ; 3                              ; --          ; --         ;
+; TOP_LEVEL_ENTITY                      ; wifi                            ; obsonetw                       ; --          ; --         ;
++---------------------------------------+---------------------------------+--------------------------------+-------------+------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -87,11 +89,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:05     ; 1.0                     ; 309 MB              ; 00:00:02                           ;
-; Fitter                    ; 00:00:04     ; 1.0                     ; 310 MB              ; 00:00:03                           ;
-; Assembler                 ; 00:00:00     ; 1.0                     ; 246 MB              ; 00:00:00                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 238 MB              ; 00:00:00                           ;
-; Total                     ; 00:00:12     ; --                      ; --                  ; 00:00:05                           ;
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 308 MB              ; 00:00:02                           ;
+; Fitter                    ; 00:00:04     ; 1.0                     ; 309 MB              ; 00:00:03                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 245 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 233 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:11     ; --                      ; --                  ; 00:00:07                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -100,10 +102,10 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; crisaghomepc     ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; crisaghomepc     ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; crisaghomepc     ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; crisaghomepc     ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; WIN-51KES31UC9J  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; WIN-51KES31UC9J  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; WIN-51KES31UC9J  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; WIN-51KES31UC9J  ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 

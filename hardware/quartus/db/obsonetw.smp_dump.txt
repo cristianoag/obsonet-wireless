@@ -1,0 +1,35 @@
+
+State Machine - |wifi|my_cmd_state
+Name my_cmd_state.STATE_CMD_FINISH my_cmd_state.STATE_CMD_DATA my_cmd_state.STATE_CMD_IDLE 
+my_cmd_state.STATE_CMD_IDLE 0 0 0 
+my_cmd_state.STATE_CMD_DATA 0 1 1 
+my_cmd_state.STATE_CMD_FINISH 1 0 1 
+
+State Machine - |wifi|my_rx_state
+Name my_rx_state.STATE_RX_FINISH my_rx_state.STATE_RX_WAITDATA my_rx_state.STATE_RX_DATA my_rx_state.STATE_RX_IDLE 
+my_rx_state.STATE_RX_IDLE 0 0 0 0 
+my_rx_state.STATE_RX_DATA 0 0 1 1 
+my_rx_state.STATE_RX_WAITDATA 0 1 0 1 
+my_rx_state.STATE_RX_FINISH 1 0 0 1 
+
+State Machine - |wifi|my_tx_state
+Name my_tx_state.STATE_TX_FINISH my_tx_state.STATE_TX_DATA my_tx_state.STATE_TX_IDLE 
+my_tx_state.STATE_TX_IDLE 0 0 0 
+my_tx_state.STATE_TX_DATA 0 1 1 
+my_tx_state.STATE_TX_FINISH 1 0 1 
+
+State Machine - |wifi|UART:U1|tx_current_state_s
+Name tx_current_state_s.STATE_TX_FINISH tx_current_state_s.STATE_TX_STOP tx_current_state_s.STATE_TX_DATA tx_current_state_s.STATE_TX_START tx_current_state_s.STATE_TX_IDLE 
+tx_current_state_s.STATE_TX_IDLE 0 0 0 0 0 
+tx_current_state_s.STATE_TX_START 0 0 0 1 1 
+tx_current_state_s.STATE_TX_DATA 0 0 1 0 1 
+tx_current_state_s.STATE_TX_STOP 0 1 0 0 1 
+tx_current_state_s.STATE_TX_FINISH 1 0 0 0 1 
+
+State Machine - |wifi|UART:U1|rx_current_state_s
+Name rx_current_state_s.STATE_RX_FINISH rx_current_state_s.STATE_RX_STOP rx_current_state_s.STATE_RX_DATA rx_current_state_s.STATE_RX_START rx_current_state_s.STATE_RX_IDLE 
+rx_current_state_s.STATE_RX_IDLE 0 0 0 0 0 
+rx_current_state_s.STATE_RX_START 0 0 0 1 1 
+rx_current_state_s.STATE_RX_DATA 0 0 1 0 1 
+rx_current_state_s.STATE_RX_STOP 0 1 0 0 1 
+rx_current_state_s.STATE_RX_FINISH 1 0 0 0 1 
