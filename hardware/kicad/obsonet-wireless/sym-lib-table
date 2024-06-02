@@ -1,7 +1,8 @@
 (sym_lib_table
   (version 7)
   (lib (name "CRISAG")(type "KiCad")(uri "${KIPRJMOD}/libraries/CRISAG.kicad_sym")(options "")(descr ""))
-  (lib (name "EP1C3T100C8N")(type "KiCad")(uri "${KIPRJMOD}/libraries/EP1C3T100C8N.kicad_sym")(options "")(descr ""))
   (lib (name "EPCS1SI8N")(type "KiCad")(uri "${KIPRJMOD}/libraries/EPCS1SI8N.kicad_sym")(options "")(descr ""))
-  (lib (name "AM29F010B")(type "KiCad")(uri "${KIPRJMOD}/libraries/AM29F010B.kicad_sym")(options "")(descr ""))
+  (lib (name "AM29LV010B")(type "KiCad")(uri "${KIPRJMOD}/libraries/AM29LV010B.kicad_sym")(options "")(descr ""))
+  (lib (name "EP1C3T144C8N")(type "KiCad")(uri "${KIPRJMOD}/libraries/EP1C3T144C8N.kicad_sym")(options "")(descr ""))
+  (lib (name "ESP-01")(type "KiCad")(uri "${KIPRJMOD}/libraries/ESP-01.kicad_sym")(options "")(descr ""))
 )
