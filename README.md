@@ -26,7 +26,7 @@ The repository is organized as follows:
 | R1 | 330 | R_0603_1608Metric | 1 | AliExpress |
 | R2 | 10 | R_0603_1608Metric | 1 | AliExpress |
 | U1 | AMS1117-3.3 | SOT-223-3_TabPin2 | 1 | AliExpress |
-| U2 | ~ | TSOP-I-32_18.4x8mm_P0.5mm | 1 | AliExpress |
+| U2 | AM29LV010B | TSOP-I-32_18.4x8mm_P0.5mm | 1 | AliExpress |
 | U3 | AMS1117-1.5 | SOT-223-3_TabPin2 | 1 | AliExpress |
 | U4 | EPCS1SI8N | SOIC127P600X175-8N | 1 | AliExpress |
 | U5 | EP1C3T144C8N | QFP50P2200X2200X160-144N | 1 | AliExpress |
