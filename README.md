@@ -18,7 +18,26 @@ The repository is organized as follows:
 
 ## Bill of Materials
 
-To be updated...
+References	Value	Footprint	Quantity	Link
+C1, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15, C16, C17, C18	100nF	C_0603_1608Metric	17	
+C2	100uF	CP_Radial_D5.0mm_P2.50mm	1	
+R3, R4, R5	1K	R_0603_1608Metric	3	
+R1	330	R_0603_1608Metric	1	
+R2	10	R_0603_1608Metric	1	
+U1	AMS1117-3.3	SOT-223-3_TabPin2	1	
+U2	~	TSOP-I-32_18.4x8mm_P0.5mm	1	
+U3	AMS1117-1.5	SOT-223-3_TabPin2	1	
+U4	EPCS1SI8N	SOIC127P600X175-8N	1	
+U5	EP1C3T144C8N	QFP50P2200X2200X160-144N	1	
+U6	ESP-01	MODULE_ESP-01	1	
+Y1	SG-310SCN_50.0000MJ3	SG310SCN500000MJ3	1	
+RN1, RN2, RN3, RN4, RN5, RN6, RN7, RN8, RN9, RN10	330	R_Array_Convex_4x0603	10	
+			1	
+			1	
+RN11	10K	R_Array_Convex_4x0603	1	
+J1	Conn_01x02	PinHeader_1x02_P2.54mm_Vertical	1	
+J2	AS	IDC-Header_2x05_P2.54mm_Vertical	1	
+J3			1	
 
 ## Schematics
 
