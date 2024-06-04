@@ -1,13 +1,16 @@
+
 # obsonet-wireless
 Repository to host source files for the Obsonet Wireless
 
 The Obsonet Wireless is a cartridge for the MSX line of computers that implements a wireless network interface. It is based on the ESP8266 module and is compatible with the Obsonet cartridge.
 
-The cartridge is based on a EP1C3T100C8 FPGA and the ESP8266 module. The FPGA is responsible for interfacing the ESP8266 module with the MSX bus and providing the necessary logic to implement the required functionality.
+The cartridge is based on a EP1C3T144C8 FPGA and the ESP8266 module. The FPGA is responsible for interfacing the ESP8266 module with the MSX bus and providing the necessary logic to implement the required functionality.
 
 The UNAPI stack developed by Konamiman is used to provide the network interface to the MSX software. The ESP8266 firmware was developed by Oduvaldo Pavan Jr and adapted to the Obsonet Wireless by The Retro Hacker.
 
 The Obsonet Wireless is a work in progress and is not yet available.
+
+![Front](images/2024-06-04_18-42.png) 
 
 ## Repository structure
 
@@ -46,5 +49,4 @@ Original version build by Daniel Berdugo and Nestor Soriano. Reloaded version by
 This project was made for the retro community and not for commercial purposes. So only retro hardware forums and individual people can build this project.
 
 THE SALE OF ANY PART OF THIS PROJECT WITHOUT EXPRESS AUTHORIZATION IS PROHIBITED!
-
 
