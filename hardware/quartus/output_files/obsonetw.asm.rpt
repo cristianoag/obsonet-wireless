@@ -1,5 +1,5 @@
 Assembler report for obsonetw
-Mon May 27 21:19:28 2024
+Wed Jun 12 15:54:13 2024
 Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
 
 
@@ -10,9 +10,8 @@ Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus/output_files/obsonetw.sof
-  6. Assembler Device Options: C:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus/output_files/obsonetw.pof
-  7. Assembler Messages
+  5. Assembler Device Options: C:/Users/crist/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus/output_files/obsonetw.sof
+  6. Assembler Messages
 
 
 
@@ -38,11 +37,11 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon May 27 21:19:28 2024 ;
+; Assembler Status      ; Successful - Wed Jun 12 15:54:13 2024 ;
 ; Revision Name         ; obsonetw                              ;
-; Top-level Entity Name ; wifi                                  ;
-; Family                ; Cyclone                               ;
-; Device                ; EP1C3T144C8                           ;
+; Top-level Entity Name ; obsonetw                              ;
+; Family                ; Cyclone IV E                          ;
+; Device                ; EP4CE6E22C8                           ;
 +-----------------------+---------------------------------------+
 
 
@@ -60,10 +59,9 @@ applicable agreement for further details.
 ; Clock source for configuration device                                       ; Internal ; Internal      ;
 ; Clock frequency of the configuration device                                 ; 10 MHZ   ; 10 MHz        ;
 ; Divide clock frequency by                                                   ; 1        ; 1             ;
-; Use configuration device                                                    ; On       ; On            ;
+; Use configuration device                                                    ; Off      ; Off           ;
 ; Configuration device                                                        ; Auto     ; Auto          ;
 ; Configuration device auto user code                                         ; Off      ; Off           ;
-; Auto-increment JTAG user code for multiple configuration devices            ; On       ; On            ;
 ; Generate Tabular Text File (.ttf) For Target Device                         ; Off      ; Off           ;
 ; Generate Raw Binary File (.rbf) For Target Device                           ; Off      ; Off           ;
 ; Generate Hexadecimal (Intel-Format) Output File (.hexout) for Target Device ; Off      ; Off           ;
@@ -71,6 +69,7 @@ applicable agreement for further details.
 ; Hexadecimal Output File count direction                                     ; Up       ; Up            ;
 ; Release clears before tri-states                                            ; Off      ; Off           ;
 ; Auto-restart configuration after error                                      ; On       ; On            ;
+; Enable OCT_DONE                                                             ; Off      ; Off           ;
 ; Generate Serial Vector Format File (.svf) for Target Device                 ; Off      ; Off           ;
 ; Generate a JEDEC STAPL Format File (.jam) for Target Device                 ; Off      ; Off           ;
 ; Generate a compressed Jam STAPL Byte Code 2.0 File (.jbc) for Target Device ; Off      ; Off           ;
@@ -78,37 +77,24 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                                                                ;
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; File Name                                                                                                                                ;
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; C:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus/output_files/obsonetw.sof ;
-; C:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus/output_files/obsonetw.pof ;
-+------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                                                            ;
++--------------------------------------------------------------------------------------------------------------------------------------+
+; File Name                                                                                                                            ;
++--------------------------------------------------------------------------------------------------------------------------------------+
+; C:/Users/crist/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus/output_files/obsonetw.sof ;
++--------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus/output_files/obsonetw.sof ;
-+----------------+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                                                                           ;
-+----------------+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Device         ; EP1C3T144C8                                                                                                                                       ;
-; JTAG usercode  ; 0x000B1F0C                                                                                                                                        ;
-; Checksum       ; 0x000B1F0C                                                                                                                                        ;
-+----------------+---------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus/output_files/obsonetw.pof ;
-+--------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Option             ; Setting                                                                                                                                       ;
-+--------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Device             ; EPCS1                                                                                                                                         ;
-; JTAG usercode      ; 0x00000000                                                                                                                                    ;
-; Checksum           ; 0x01A03C3D                                                                                                                                    ;
-; Compression Ratio  ; 2                                                                                                                                             ;
-+--------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/crist/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus/output_files/obsonetw.sof ;
++----------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                                                                       ;
++----------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Device         ; EP4CE6E22C8                                                                                                                                   ;
+; JTAG usercode  ; 0x00095F26                                                                                                                                    ;
+; Checksum       ; 0x00095F26                                                                                                                                    ;
++----------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -117,12 +103,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon May 27 21:19:27 2024
+    Info: Processing started: Wed Jun 12 15:54:12 2024
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off obsonetw -c obsonetw
+Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 245 megabytes
-    Info: Processing ended: Mon May 27 21:19:28 2024
+    Info: Peak virtual memory: 264 megabytes
+    Info: Processing ended: Wed Jun 12 15:54:13 2024
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

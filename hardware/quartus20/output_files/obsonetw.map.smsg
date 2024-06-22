@@ -1,0 +1,3 @@
+Warning (10273): Verilog HDL warning at obsonetw.v(52): extended using "x" or "z" File: C:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20/obsonetw.v Line: 52
+Warning (10268): Verilog HDL information at obsonetw.v(62): always construct contains both blocking and non-blocking assignments File: C:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20/obsonetw.v Line: 62
+Warning (10273): Verilog HDL warning at obsonetw.v(79): extended using "x" or "z" File: C:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20/obsonetw.v Line: 79

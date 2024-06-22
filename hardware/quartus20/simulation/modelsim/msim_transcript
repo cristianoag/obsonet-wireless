@@ -1,0 +1,72 @@
+# Reading pref.tcl
+# do obsonetw_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Cristiano/OneDrive/Personal/11.\ Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20 {C:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20/obsonetw.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:49:25 on Jun 21,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20" C:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20/obsonetw.v 
+# -- Compiling module obsonetw
+# 
+# Top level modules:
+# 	obsonetw
+# End time: 21:49:25 on Jun 21,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20/uart.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:49:25 on Jun 21,2024
+# vcom -reportprogress 300 -93 -work work C:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20/uart.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity UART
+# -- Compiling architecture RTL of UART
+# End time: 21:49:26 on Jun 21,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20/fifo.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:49:26 on Jun 21,2024
+# vcom -reportprogress 300 -93 -work work C:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20/fifo.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity FIFO
+# -- Compiling architecture Behavioral of FIFO
+# End time: 21:49:26 on Jun 21,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20/wifi.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:49:26 on Jun 21,2024
+# vcom -reportprogress 300 -93 -work work C:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20/wifi.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity wifi
+# -- Compiling architecture Behavior of wifi
+# -- Loading entity UART
+# ** Error (suppressible): C:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20/wifi.vhd(160): (vcom-1141) Identifier "UART" does not identify a component declaration.
+# -- Loading entity FIFO
+# ** Error (suppressible): C:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20/wifi.vhd(174): (vcom-1141) Identifier "FIFO" does not identify a component declaration.
+# ** Note: C:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20/wifi.vhd(510): VHDL Compiler exiting
+# End time: 21:49:26 on Jun 21,2024, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./obsonetw_run_msim_rtl_verilog.do line 11
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work {C:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20/wifi.vhd}"

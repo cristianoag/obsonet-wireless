@@ -17342,7 +17342,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "4e3504ca-110b-4a56-b221-bb1fffa5055a")
 		(property "Reference" "U2"
 			(at 166.9289 190.5 0)
@@ -17353,8 +17352,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "~"
-			(at 161.29 209.55 0)
+		(property "Value" "AM29LV010B"
+			(at 172.974 188.214 0)
 			(effects
 				(font
 					(size 1.27 1.27)

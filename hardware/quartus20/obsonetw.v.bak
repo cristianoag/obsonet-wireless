@@ -1,0 +1,11 @@
+module obsonetw(msx_sltsl, msx_cs1, flash_ce, flash_oe)
+
+	input 	msx_sltsl; 	//MSX slot select
+	input 	msx_cs1;		//MSX ROM page 4000h-7FFFh select signal
+	output 	flash_ce;	//Flash chip enable
+	output 	flash_oe;	//Flash output enable
+	
+	assign flash_ce = msx_sltsl;
+	assign flash_oe = msx_cs1;
+	
+endmodule

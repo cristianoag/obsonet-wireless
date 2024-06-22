@@ -1,0 +1,151 @@
+m255
+K4
+z2
+!s11e MIXED_VERSIONS
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20/simulation/modelsim
+Efifo
+Z1 w1663972750
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 2
+R0
+Z5 8C:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20/fifo.vhd
+Z6 FC:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20/fifo.vhd
+l0
+L53 1
+VZ4Sah=^?@Hg^V2=46S88o0
+!s100 _ZFhEc8P]z_FmJ@1>S9J20
+Z7 OV;C;2020.1;71
+31
+Z8 !s110 1719017366
+!i10b 1
+Z9 !s108 1719017366.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20/fifo.vhd|
+Z11 !s107 C:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20/fifo.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Abehavioral
+R2
+R3
+R4
+DEx4 work 4 fifo 0 22 Z4Sah=^?@Hg^V2=46S88o0
+!i122 2
+l88
+L78 87
+VSoN]mLW`aH0dz_]_c1PGe2
+!s100 lQJAXnXaDg`a9D:RO7mJ:1
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vobsonetw
+!s110 1719017365
+!i10b 1
+!s100 >6QBl@6aTJoUPBA[547P[0
+!s11b Dg1SIo80bB@j0V0VzS_@n1
+Il]HD6m_mLn`Q>NQeK5_if1
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1719017154
+8C:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20/obsonetw.v
+FC:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20/obsonetw.v
+!i122 0
+L0 1 100
+OV;L;2020.1;71
+r1
+!s85 0
+31
+Z14 !s108 1719017365.000000
+!s107 C:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20/obsonetw.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20|C:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20/obsonetw.v|
+!i113 1
+o-vlog01compat -work work
+!s92 -vlog01compat -work work {+incdir+C:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20}
+tCvgOpt 0
+Euart
+R1
+Z15 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z16 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+R2
+R3
+R4
+!i122 1
+R0
+Z17 8C:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20/uart.vhd
+Z18 FC:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20/uart.vhd
+l0
+L48 1
+VZKAS=R6HJIkR08>o7Hg[83
+!s100 b^]]AbLz6;OYdUbGIE1lO0
+R7
+31
+R8
+!i10b 1
+R14
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20/uart.vhd|
+Z20 !s107 C:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20/uart.vhd|
+!i113 1
+R12
+R13
+Artl
+R15
+R16
+R2
+R3
+R4
+DEx4 work 4 uart 0 22 ZKAS=R6HJIkR08>o7Hg[83
+!i122 1
+l86
+L65 221
+VnD9bmkWJTzE4ZXlc70Z5R1
+!s100 m1C_gfFkF5NVfjF]96>Gz2
+R7
+31
+R8
+!i10b 1
+R14
+R19
+R20
+!i113 1
+R12
+R13
+Ewifi
+R1
+R2
+R15
+R16
+R3
+R4
+!i122 3
+R0
+8C:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20/wifi.vhd
+FC:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20/wifi.vhd
+l0
+L91 1
+V46=LR7lkzTS4^3;Zf_me40
+!s100 AJ33OS<ZNN8=ed=L6[VG93
+R7
+31
+R8
+!i10b 1
+R9
+!s90 -reportprogress|300|-93|-work|work|C:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20/wifi.vhd|
+!s107 C:/Users/Cristiano/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20/wifi.vhd|
+!i113 1
+R12
+R13

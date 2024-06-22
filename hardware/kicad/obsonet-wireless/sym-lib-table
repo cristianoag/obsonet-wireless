@@ -6,4 +6,5 @@
   (lib (name "EP1C3T144C8N")(type "KiCad")(uri "${KIPRJMOD}/libraries/EP1C3T144C8N.kicad_sym")(options "")(descr ""))
   (lib (name "ESP-01")(type "KiCad")(uri "${KIPRJMOD}/libraries/ESP-01.kicad_sym")(options "")(descr ""))
   (lib (name "SG-310SCN_50_0000MJ3")(type "KiCad")(uri "${KIPRJMOD}/libraries/SG-310SCN_50_0000MJ3.kicad_sym")(options "")(descr ""))
+  (lib (name "AM29F010B")(type "KiCad")(uri "${KIPRJMOD}/libraries/AM29F010B.kicad_sym")(options "")(descr ""))
 )

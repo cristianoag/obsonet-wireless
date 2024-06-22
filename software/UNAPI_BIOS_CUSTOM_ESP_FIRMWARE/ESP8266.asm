@@ -102,11 +102,11 @@
 ;*************************
 
 ;--- SM-X ROM is less verbose...
-SMX_ROM:				equ	1
+SMX_ROM:				equ	0
 ;--- Non-FPGA versions do not check OCM hardware...
-CHECK_OCM_HW:			equ	1
+CHECK_OCM_HW:			equ	0
 ;--- FPGA Version can have the Turbo-R logo incorporated or not...
-TURBO_R_LOGO:			equ	1
+TURBO_R_LOGO:			equ	0
 
 ;*******************
 ;***  CONSTANTS  ***
@@ -5574,8 +5574,10 @@ ENTERING_WIFI_SETUP:
 
 WELCOME:
 	db	CLS
-	db	"ESP8266 TCP/IP UNAPI 1.2"		,CR,LF
-	db	"(c)2020 Oduvaldo Pavan Junior"	,GOLEFT,CR,LF
+	db  "ObsoNET Wireless by" 		,CR,LF
+	db  "The Retro Hacker"				,CR,LF,LF
+	db	"ESP8266 TCP/IP UNAPI 1.2 by"	,CR,LF
+	db	"(c)2020 Oduvaldo Pavan Jr"		,CR,LF
 	db	"ducasp@gmail.com"				,CR,LF,LF,STTERMINATOR
 ;---
 

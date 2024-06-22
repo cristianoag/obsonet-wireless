@@ -1,0 +1,9 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/Users/crisag/OneDrive/Personal/11.\ Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20 {C:/Users/crisag/OneDrive/Personal/11. Electronics/Obsonet_Wireless/GitHub/obsonet-wireless/hardware/quartus20/obsonetw.v}
+
