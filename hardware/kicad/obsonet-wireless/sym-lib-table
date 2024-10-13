@@ -7,4 +7,5 @@
   (lib (name "ESP-01")(type "KiCad")(uri "${KIPRJMOD}/libraries/ESP-01.kicad_sym")(options "")(descr ""))
   (lib (name "SG-310SCN_50_0000MJ3")(type "KiCad")(uri "${KIPRJMOD}/libraries/SG-310SCN_50_0000MJ3.kicad_sym")(options "")(descr ""))
   (lib (name "AM29F010B")(type "KiCad")(uri "${KIPRJMOD}/libraries/AM29F010B.kicad_sym")(options "")(descr ""))
+  (lib (name "m29f400m")(type "KiCad")(uri "${KIPRJMOD}/libraries/m29f400m.kicad_sym")(options "")(descr ""))
 )

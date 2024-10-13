@@ -1,6 +1,6 @@
 
 # obsonet-wireless
-Repository to host source files for the Obsonet Wireless
+Repository to host source files for the Obsonet Wireless. This is a project still in development and not yet fully tested. Do not order PCBs or components yet.
 
 The Obsonet Wireless is a cartridge for the MSX line of computers that implements a wireless network interface. It is based on the ESP8266 module and is compatible with the Obsonet cartridge.
 
